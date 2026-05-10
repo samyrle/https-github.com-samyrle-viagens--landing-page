@@ -104,6 +104,246 @@ treinando projetos em front end .
     <footer id="contato">
         <p>&copy; 2026 Destinos incriveis- Agência de Viagens.</p>
          </footer>
-
 </body>
 </html>
+
+
+
+
+##css##
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #f4f4f4;
+    color: #333;
+    background-image: url('imagens/praia\ de\ maceio.png');
+     background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+/* Header */
+header {
+    background-color: #fff;
+    padding: 20px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #0077b6;
+}
+nav ul { list-style: none; }
+nav ul li { display: inline; margin-left: 20px; }
+nav ul li a { text-decoration: none; color: #333; font-weight: bold; }
+
+.btn-cta {
+    background-color: #ff9f1c;
+    padding: 10px 20px;
+    border-radius: 5px;
+    color: rgba(255, 255, 255, 0.785);
+}
+
+/* Hero Section */
+.hero {
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0, 0, 0, 0.5)), url('style.css');
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.841);
+    padding-top: 80px; /* Espaço pro header fixo */
+}
+.hero h1 { font-size: 48px; margin-bottom: 20px; }
+.hero p { font-size: 20px; margin-bottom: 30px; }
+
+.btn-cta-large {
+    background-color: #ff9f1c;
+    padding: 15px 30px;
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+/* Destinos/Cards */
+.card {
+    background: #f9f9f97b;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 3px rgba(0,0,0,0.1);
+}
+
+.destinos { 
+    padding: 50px 20px; 
+    text-align: center; 
+}
+
+/* Configuração da Grid para alinhar os cards lado a lado */
+.grid-pacotes {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  font-family: Arial, sans-serif;
+}
+
+/* Estilização individual de cada Card */
+.card {
+  background-color: #ffffff;
+  border-radius: 12px;
+  overflow: hidden; /* Garante que a imagem siga o arredondamento do card */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 20px;
+}
+
+/* Efeito de levante ao passar o mouse no card */
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Configuração das imagens dos cards */
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover; /* Recorta a imagem proporcionalmente sem distorcer */
+}
+
+/* Textos internos do card */
+.card h3 {
+  margin: 16px 16px 8px 16px;
+  font-size: 20px;
+  color: #333;
+}
+
+.card p {
+  margin: 0 16px 20px 16px;
+  color: #666;
+  font-size: 14px;
+  line-height: 1.5;
+  flex-grow: 1; /* Empurra o botão sempre para o final do card */
+}
+
+/* Botão "Saber Mais" */
+.btn-card {
+  display: inline-block;
+  margin: 0 16px;
+  padding: 10px;
+  background-color: #007BFF;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 6px;
+  transition: background-color 0.2s ease;
+}
+
+.btn-card:hover {
+  background-color: #0056b3;
+}
+
+/* Estilização do texto descritivo (Article) */
+.descricao-cidade {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 0 20px;
+  font-family: Arial, sans-serif;
+  color: #e6ecf5e9;
+  line-height: 1.6;
+}
+
+.descricao-cidade h2 {
+  color: #333;
+  border-bottom: 2px solid #1d19e8;
+  padding-bottom: 8px;
+}
+
+
+/* Centraliza e limita a largura do formulário na tela */
+form {
+  max-width: 400px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #f9f9f97b;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  font-family: Arial, sans-serif;
+}
+.form h2{
+ font-weight: bold;
+  color: #6397d5;
+ text-align: center;
+}
+/* Organiza os blocos de cada campo com espaçamento inferior */
+form div {
+  margin-bottom: 16px;
+}
+
+/* Estiliza os rótulos de texto */
+label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: bold;
+  color: #333333;
+}
+
+/* Padroniza as caixas de entrada de texto e e-mail e a área de mensagem */
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc0c0;
+  border-radius: 4px;
+  box-sizing: border-box; /* Garante que o padding não mude o tamanho final */
+  font-size: 14px;
+}
+
+/* Altera a cor da borda quando o usuário clica no campo */
+input:focus,
+textarea:focus {
+  border-color: #007BFF;
+  outline: none; /* Remove a borda padrão do navegador */
+}
+
+/* Estiliza o botão de envio */
+button[type="submit"] {
+  width: 100%;
+  padding: 12px;
+  background-color: #007BFF;
+  color: rgb(144, 137, 137);
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+/* Aplica efeito visual ao passar o mouse sobre o botão */
+button[type="submit"]:hover {
+  background-color: #b35f00;
+}
